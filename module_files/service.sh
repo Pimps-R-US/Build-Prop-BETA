@@ -175,7 +175,7 @@ sys_sensitive_checks() {
         "aicp" "arter97" "blu_spark" "cyanogenmod" "deathly" "elementalx" "elite" "franco" "hadeskernel" \
         "morokernel" "noble" "optimus" "slimroms" "sultan" "aokp" "bharos" "calyxos" "calyxOS" "divestos" \
         "emteria.os" "grapheneos" "indus" "iodéos" "kali" "nethunter" "omnirom" "paranoid" "replicant" \
-        "resurrection" "rising" "remix" "shift" "volla" "icosa" "kirisakura" "infinity" "Infinity"
+        "resurrection" "rising" "remix" "shift" "volla" "icosa" "kirisakura" "infinity" "Infinity"/ "alch3my" "Alch3my"
       # add more...
 
       # Wait for 1 hour before the next check.
@@ -184,11 +184,14 @@ sys_sensitive_checks() {
 
     # Fix display properties to remove custom ROM references
     replace_value_resetprop ro.build.flavor "lineage_" ""
+    replace_value_resetprop ro.build.flavor "alch3my_" ""
     replace_value_resetprop ro.build.flavor "userdebug" "user"
     replace_value_resetprop ro.build.display.id "lineage_" ""
+    replace_value_resetprop ro.build.display.id "alch3my_" ""
     replace_value_resetprop ro.build.display.id "userdebug" "user"
     replace_value_resetprop ro.build.display.id "dev-keys" "release-keys"
     replace_value_resetprop vendor.camera.aux.packagelist "lineageos." ""
+    replace_value_resetprop vendor.camera.aux.packagelist "alch3myos." ""
     replace_value_resetprop ro.build.version.incremental "eng." ""
 
     # Realme fingerprint fix
@@ -288,7 +291,7 @@ sys_sensitive_checks() {
     set_permissions /proc/cmdline 440
     set_permissions /proc/net/unix 440
     set_permissions /system/addon.d 750
-    set_permissions /sdcard/TWRP 750
+    set_permissions /sdcard/FOX 750
   fi
 }
 
